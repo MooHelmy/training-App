@@ -8,6 +8,15 @@ class laptops extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<String> image = [
+      'assets/laptop_image/1.jpeg',
+      'assets/laptop_image/2.jpeg',
+      'assets/laptop_image/3.jpeg',
+      'assets/laptop_image/4.jpeg',
+      'assets/laptop_image/5.jpeg',
+      'assets/laptop_image/6.jpeg',
+      'assets/laptop_image/7.jpeg',
+    ];
     return Scaffold(
       backgroundColor: KmainScreencolor,
       appBar: AppBar(
@@ -17,10 +26,10 @@ class laptops extends StatelessWidget {
         ),
       ),
       body: ListView.builder(
-        itemCount: 10,
+        itemCount: image.length,
         itemBuilder: (context, index) {
-          return const customlist(
-            image: 'assets/shopping.jpg',
+          return customlist(
+            image: image[index],
             name: 'laptops',
             price: '7000',
           );

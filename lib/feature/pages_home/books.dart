@@ -8,19 +8,29 @@ class book extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<String> image = [
+      'assets/books/1.jpeg',
+      'assets/books/2.jpeg',
+      'assets/books/3.jpeg',
+      'assets/books/4.jpeg',
+      'assets/books/5.jpeg',
+      'assets/books/6.jpeg',
+      'assets/books/7.jpeg'
+    ];
+
     return Scaffold(
       backgroundColor: KmainScreencolor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title: Text(
+        title: const Text(
           'books page',
         ),
       ),
       body: ListView.builder(
-        itemCount: 10,
+        itemCount: image.length,
         itemBuilder: (context, index) {
-          return const customlist(
-            image: 'assets/shopping.jpg',
+          return customlist(
+            image: image[index],
             name: 'books',
             price: '200',
           );

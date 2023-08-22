@@ -8,6 +8,14 @@ class fruit extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<String> image = [
+      'assets/fruits/1.jpeg',
+      'assets/fruits/2.jpeg',
+      'assets/fruits/3.jpeg',
+      'assets/fruits/4.jpeg',
+      'assets/fruits/5.jpeg',
+      'assets/fruits/6.jpeg',
+    ];
     return Scaffold(
       backgroundColor: KmainScreencolor,
       appBar: AppBar(
@@ -17,10 +25,10 @@ class fruit extends StatelessWidget {
         ),
       ),
       body: ListView.builder(
-        itemCount: 10,
+        itemCount: image.length,
         itemBuilder: (context, index) {
-          return const customlist(
-            image: 'assets/shopping.jpg',
+          return customlist(
+            image: image[index],
             name: 'frut',
             price: '23',
           );

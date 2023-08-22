@@ -76,7 +76,7 @@ class Login_body extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   'don\'t have account ? ',
                   style: TextStyle(fontSize: 20),
                 ),

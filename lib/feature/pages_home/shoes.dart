@@ -8,6 +8,15 @@ class shoespage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<String> image = [
+      'assets/shoes/1.jpeg',
+      'assets/shoes/2.jpeg',
+      'assets/shoes/3.jpeg',
+      'assets/shoes/4.jpeg',
+      'assets/shoes/5.jpeg',
+      'assets/shoes/6.jpeg',
+      'assets/shoes/7.jpeg',
+    ];
     return Scaffold(
       backgroundColor: KmainScreencolor,
       appBar: AppBar(
@@ -17,10 +26,10 @@ class shoespage extends StatelessWidget {
         ),
       ),
       body: ListView.builder(
-        itemCount: 10,
+        itemCount: image.length,
         itemBuilder: (context, index) {
-          return const customlist(
-            image: 'assets/shopping.jpg',
+          return customlist(
+            image: image[index],
             name: 'shoes',
             price: '250',
           );
